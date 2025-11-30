@@ -1,4 +1,6 @@
 
+document.title = 'cm to Feet'
+
 const btn = document.getElementById('btn');
 
 btn.addEventListener('click', () => {
