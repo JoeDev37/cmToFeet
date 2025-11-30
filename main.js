@@ -1,11 +1,15 @@
 
-let heightInCm = prompt('Wat is your height?');
+const btn = document.getElementById('btn');
 
-let toInche = heightInCm/2.54;
+btn.addEventListener('click', () => {
 
-let toFeet = Math.floor(toInche/12);
-let remainInches = Math.round(toInche % 12)
+    const inputCm = document.getElementById('input').value;
+    const inputNumber = parseFloat(inputCm)
+    const toInche = inputNumber/2.54;
+    const toFeet = Math.floor(toInche/12);
+    let remainInches = Math.round(toInche % 12);
 
-console.log(`${toFeet} feet and ${remainInches} inches` );
-console.log(`${toFeet}'${remainInches}`)
+    const output = document.getElementById('output');
+    output.value = `${toFeet}'${remainInches}`
 
+})
